@@ -15,7 +15,7 @@ public class PraktikumTests {
         this.cardHolderName = cardHolderName;
         this.expected = expected;
     }
-    @Parameterized.Parameters (name = "Проверка имени: {0}")
+    @Parameterized.Parameters //(name = "Проверка имени: {0}")
     public static Object[][] getCardHolderName(){
         return new Object[][]{
                 {"Aleks Burns", true},
@@ -29,7 +29,7 @@ public class PraktikumTests {
         };
     }
     @Test
-    @DisplayName("Проверка имени")
+    @DisplayName("Проверка имени: {0}")
     @Description("Тест метода верификации имени держателя карты")
     public void checkCardHolderName(){
         Account account = new Account(cardHolderName);

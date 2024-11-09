@@ -8,6 +8,6 @@ public class Praktikum {
          */
         String cardHolderName = "Aleks Burns";
         Account account = new Account(cardHolderName);
-        System.out.println(account.checkNameToEmboss());
+        account.checkNameToEmboss();
     }
 }

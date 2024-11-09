@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +29,8 @@ public class PraktikumTests {
         };
     }
     @Test
+    @DisplayName("Проверка имени")
+    @Description("Тест метода верификации имени держателя карты")
     public void checkCardHolderName(){
         Account account = new Account(cardHolderName);
         Assert.assertEquals(expected, account.checkNameToEmboss());
